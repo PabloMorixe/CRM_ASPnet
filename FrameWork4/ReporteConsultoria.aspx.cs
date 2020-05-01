@@ -10,11 +10,18 @@ namespace FrameWork4
     public partial class ReporteConsultoria : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
 
+        {
+     
         }
 
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+            
+        {
+ 
+        }
+
+        protected void CRMasp_Selecting(object sender, SqlDataSourceSelectingEventArgs e)
         {
 
         }
