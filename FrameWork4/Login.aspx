@@ -12,9 +12,13 @@
         <div><asp:Label ID="Msg_Email" runat="server" Text="Email"></asp:Label></div>
         <div><asp:TextBox ID="txtUsuario" runat="server"></asp:TextBox></div>
         <div><asp:Label ID="Msg_Password" runat="server" Text="Password" ></asp:Label></div>
-        <div><asp:TextBox ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox></div>
-        <div><asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click"/></div>
-        <div><asp:Label ID="Msg_Login" runat="server" Text="Credencial de Usuario Incorrecta" ForeColor="Red" ></asp:Label></div>
+        <div><asp:TextBox ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox>
+            <br />
+        </div>
+        <div style="margin-left: 120px"><asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click"/>
+            <br />
+        </div>
+        <div style="margin-left: 80px"><asp:Label ID="Msg_Login" runat="server" Text="Credencial de Usuario Incorrecta" ForeColor="Red" ></asp:Label></div>
 
     </form>
 </body>
