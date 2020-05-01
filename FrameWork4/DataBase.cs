@@ -18,12 +18,12 @@ namespace FrameWork4
 
         private static DbCommand CreateCommand()
         {
-            String LP5_DB = ConfigurationManager.ConnectionStrings["LP5_DB"].ConnectionString;
-            String dbProviderName = ConfigurationManager.ConnectionStrings["LP5_DB"].ProviderName;
+            String CRM_aspConnectionString = ConfigurationManager.ConnectionStrings["CRM_aspConnectionString"].ConnectionString;
+            String dbProviderName = ConfigurationManager.ConnectionStrings["CRM_aspConnectionString"].ProviderName;
 
             DbProviderFactory factory = DbProviderFactories.GetFactory(dbProviderName);
             DbConnection conn = factory.CreateConnection();
-            conn.ConnectionString = LP5_DB;
+            conn.ConnectionString = CRM_aspConnectionString;
             DbCommand comm = conn.CreateCommand();
             return comm;
         }

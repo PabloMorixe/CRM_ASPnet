@@ -25,7 +25,7 @@ namespace FrameWork4
                 Session["username"] = txtUsuario.Text.Trim();
                 Session["sessionID"] = resultado.Item2;
                 
-                Response.Redirect("Default.aspx");  // Acceso Concedido
+                Response.Redirect("ReporteConsultoria.aspx");  // Acceso Concedido
             }
             else
             {
