@@ -12,3 +12,5 @@ C:\Users\ecasaretto\source\repos\FrameWork4\FrameWork4\obj\Debug\FrameWork4.cspr
 C:\Users\ecasaretto\source\repos\FrameWork4\FrameWork4\obj\Debug\FrameWork4.csproj.CoreCompileInputs.cache
 C:\Users\ecasaretto\source\repos\FrameWork4\FrameWork4\obj\Debug\FrameWork4.dll
 C:\Users\ecasaretto\source\repos\FrameWork4\FrameWork4\obj\Debug\FrameWork4.pdb
+C:\Users\ecasaretto\source\repos\CRM_ASPnet\FrameWork4\obj\Debug\FrameWork4.dll
+C:\Users\ecasaretto\source\repos\CRM_ASPnet\FrameWork4\obj\Debug\FrameWork4.pdb
