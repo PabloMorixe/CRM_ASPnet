@@ -21,3 +21,8 @@ C:\Users\Pablo\Documents\GitHub\CRM_ASPnet\FrameWork4\bin\FrameWork4.dll
 C:\Users\Pablo\Documents\GitHub\CRM_ASPnet\FrameWork4\bin\FrameWork4.pdb
 C:\Users\Pablo\Documents\GitHub\CRM_ASPnet\FrameWork4\obj\Debug\FrameWork4.csprojAssemblyReference.cache
 C:\Users\Pablo\Documents\GitHub\CRM_ASPnet\FrameWork4\obj\Debug\FrameWork4.csproj.CoreCompileInputs.cache
+C:\Users\ecasaretto\source\repos\CRM_ASPnet\FrameWork4\bin\FrameWork4.dll.config
+C:\Users\ecasaretto\source\repos\CRM_ASPnet\FrameWork4\bin\FrameWork4.dll
+C:\Users\ecasaretto\source\repos\CRM_ASPnet\FrameWork4\bin\FrameWork4.pdb
+C:\Users\ecasaretto\source\repos\CRM_ASPnet\FrameWork4\obj\Debug\FrameWork4.csprojAssemblyReference.cache
+C:\Users\ecasaretto\source\repos\CRM_ASPnet\FrameWork4\obj\Debug\FrameWork4.csproj.CoreCompileInputs.cache

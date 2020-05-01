@@ -11,6 +11,10 @@
     <form id="form1" runat="server">
         <div>
         </div>
+        <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="CRMasp" DataTextField="NombreCliente" DataValueField="NombreCliente" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
+            <asp:ListItem Selected="True">Seleccione Cliente</asp:ListItem>
+        </asp:DropDownList>
+        <asp:SqlDataSource ID="CRMasp" runat="server" ConnectionString="<%$ ConnectionStrings:CRM_aspConnectionString %>" SelectCommand="SELECT [NombreCliente] FROM [Cliente]"></asp:SqlDataSource>
     </form>
 </body>
 </html>
