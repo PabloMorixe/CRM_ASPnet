@@ -75,6 +75,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConexionLogin - Copia.cs" />
     <Compile Include="ConexionLogin.cs" />
     <Compile Include="DataBase.cs" />
     <Compile Include="Default.aspx.cs">
