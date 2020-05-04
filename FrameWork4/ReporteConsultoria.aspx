@@ -18,27 +18,49 @@
         <p>
             <strong><span class="auto-style1">OPCION: 1 DAR DE ALTA UN EMPLEADO</span></strong><br />
             <asp:Label ID="LabelNombre" runat="server" Text="Nombre"></asp:Label>
-        </p>
-        <p>
-            <asp:TextBox ID="TxtNombre" runat="server"></asp:TextBox>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:TextBox ID="TxtNombre" runat="server" OnTextChanged="TxtNombre_TextChanged"></asp:TextBox>
         </p>
         <p>
             <asp:Label ID="LabelApellido" runat="server" Text="Apellido"></asp:Label>
-        </p>
-        <p>
+        &nbsp;
             <asp:TextBox ID="TxtApellido" runat="server"></asp:TextBox>
         </p>
         <p>
-            <asp:Label ID="CUIL" runat="server" Text="CUIL"></asp:Label>
+        &nbsp;
+            <asp:Label ID="LabelCatEmpleado" runat="server" Text="CatEmpleado"></asp:Label>
+        &nbsp;<asp:DropDownList ID="DropDownCatEmpleado" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" DataTextFormatString="CatEmpleado">
+            <asp:ListItem Selected="True">Seleccione Cliente</asp:ListItem>
+        </asp:DropDownList>
+        <asp:SqlDataSource ID="CRMasp" runat="server" ConnectionString="<%$ ConnectionStrings:CRM_aspConnectionString %>" 
+            SelectCommand="SELECT [Descripcion] FROM [EmpleadoCategoria]" OnSelecting="CRMasp_Selecting"></asp:SqlDataSource>
         </p>
         <p>
-            <asp:TextBox ID="TxtCUIT" runat="server"></asp:TextBox>
+            Empleado estado
+            <asp:DropDownList ID="DropDownEmpleadoEstado" runat="server" DataSourceID="CRMasp" OnSelectedIndexChanged="DropDownEmpleadoEstado_SelectedIndexChanged">
+            </asp:DropDownList>
+
+        <asp:SqlDataSource ID="CRMasp0" runat="server" ConnectionString="<%$ ConnectionStrings:CRM_aspConnectionString %>" 
+            SelectCommand="SELECT [DescripcionEstado] FROM [EmpleadoEstado]" OnSelecting="CRMasp_Selecting"></asp:SqlDataSource>
+
+        </p>
+        <p>
+            fecha ingreso
+            <asp:Calendar ID="CalendarFechaIngreso" runat="server" BackColor="White" BorderColor="White" BorderWidth="1px" Font-Names="Verdana" Font-Size="9pt" ForeColor="Black" Height="190px" NextPrevFormat="FullMonth" Width="350px">
+                <DayHeaderStyle Font-Bold="True" Font-Size="8pt" />
+                <NextPrevStyle Font-Bold="True" Font-Size="8pt" ForeColor="#333333" VerticalAlign="Bottom" />
+                <OtherMonthDayStyle ForeColor="#999999" />
+                <SelectedDayStyle BackColor="#333399" ForeColor="White" />
+                <TitleStyle BackColor="White" BorderColor="Black" BorderWidth="4px" Font-Bold="True" Font-Size="12pt" ForeColor="#333399" />
+                <TodayDayStyle BackColor="#CCCCCC" />
+            </asp:Calendar>
+
         </p>
         <p>
             <asp:Label ID="LabelFechaNacimiento" runat="server" Text="Fecha Nacimiento"></asp:Label>
         </p>
         <p>
-            <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
+            <asp:Calendar ID="CalendarFechaNacimiento" runat="server" Height="82px" Width="194px"></asp:Calendar>
         </p>
         <p>
             <asp:Label ID="LabelCorreoelectronico" runat="server" Text="Correo electronico"></asp:Label>
@@ -53,30 +75,33 @@
             <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
         </p>
         <p>
-            <asp:Label ID="LabelCatEmpleado" runat="server" Text="CatEmpleado"></asp:Label>
+            <asp:Label ID="LabelTelefono" runat="server" Text="Telefono"></asp:Label>
+            <asp:TextBox ID="TxtTelefono" runat="server"></asp:TextBox>
         </p>
         <p>
-        <asp:DropDownList ID="DropDownCatEmpleado" runat="server" DataSourceID="CRMasp" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" DataTextFormatString="CatEmpleado">
-            <asp:ListItem Selected="True">Seleccione Cliente</asp:ListItem>
-        </asp:DropDownList>
-        <asp:SqlDataSource ID="CRMasp" runat="server" ConnectionString="<%$ ConnectionStrings:CRM_aspConnectionString %>" 
-            SelectCommand="SELECT [Descripcion] FROM [EmpleadoCategoria]" OnSelecting="CRMasp_Selecting"></asp:SqlDataSource>
+            &nbsp;</p>
+        <p>
+            <asp:Label ID="CUIL" runat="server" Text="CUIL"></asp:Label>
+            <asp:TextBox ID="TxtNroCuil" runat="server"></asp:TextBox>
         </p>
+        <p>
+            &nbsp;</p>
         <p>
             <asp:Label ID="LabelDomicilio" runat="server" Text="Domicilio"></asp:Label>
         </p>
         <p>
-            <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
-        </p>
-        <p>
-            <asp:Label ID="LabelTelefono" runat="server" Text="Telefono"></asp:Label>
-        </p>
-        <p>
-            <asp:TextBox ID="TxtTelefono" runat="server"></asp:TextBox>
+            <asp:TextBox ID="TxtEmpleadoDomicilio" runat="server"></asp:TextBox>
         </p>
         <p>
             <asp:Button ID="BtnGuardar" runat="server" OnClick="BtnGuardar_Click" Text="Guardar" />
         </p>
+        <p style="margin-left: 80px">
+            <asp:TextBox ID="Msg_AltaEmpleado" runat="server"></asp:TextBox>
+        </p>
+        <p>
+            &nbsp;</p>
+        <p>
+            &nbsp;</p>
     </form>
 </body>
 </html>

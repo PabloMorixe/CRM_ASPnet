@@ -35,6 +35,19 @@ namespace FrameWork4
             comm.CommandText = sql;
             return comm;
         }
+        //
+        public static DbParameter CreateParameter(DbCommand comm, string nombre, string Apellido, string EmpleadoCategoriaDescripcion,
+            string EmpleadoEstadoDescripcion, string FechaAlta, string FechaNacimiento, string CorreoElectronico,
+            string telefono, string NroCUIL, string Domicilio)
+
+        {
+            DbParameter param = comm.CreateParameter();
+            param.ParameterName = nombre;
+            param.DbType = Type;
+            param.Value = Value;
+            return param;
+        }
+        //
 
         public static DbCommand CreateCommand(String sql, bool adhocSQL)
         {
