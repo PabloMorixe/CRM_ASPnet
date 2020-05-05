@@ -18,7 +18,7 @@ namespace FrameWork4
             //
         }
             internal static Tuple<int, string> altaEmpleado(string nombre, string Apellido, string EmpleadoCategoriaDescripcion, 
-            string EmpleadoEstadoDescripcion, string FechaAlta,string FechaNacimiento, string CorreoElectronico,
+            string EmpleadoEstadoDescripcion, DateTime FechaAlta,DateTime FechaNacimiento, string CorreoElectronico,
             string telefono,  string NroCUIL, string Domicilio)
               {
             int res = 0;
@@ -41,7 +41,8 @@ namespace FrameWork4
             if (dt.Rows.Count > 0)
             {
                 res = (int)dt.Rows[0]["res"];
-               
+                sessID = dt.Rows[0]["sessionID"].ToString();
+
             }
             return Tuple.Create(res, sessID);
 

@@ -69,40 +69,31 @@ namespace FrameWork4
         protected global::System.Web.UI.WebControls.Label LabelCatEmpleado;
 
         /// <summary>
-        /// Control DropDownCatEmpleado.
+        /// Control TxtCategoriaEmpleado.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownCatEmpleado;
+        protected global::System.Web.UI.WebControls.TextBox TxtCategoriaEmpleado;
 
         /// <summary>
-        /// Control CRMasp.
+        /// Control TxtEmpleadoEstado.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource CRMasp;
+        protected global::System.Web.UI.WebControls.TextBox TxtEmpleadoEstado;
 
         /// <summary>
-        /// Control DropDownEmpleadoEstado.
+        /// Control LblTxTFechaIngreso.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownEmpleadoEstado;
-
-        /// <summary>
-        /// Control CRMasp0.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource CRMasp0;
+        protected global::System.Web.UI.WebControls.Label LblTxTFechaIngreso;
 
         /// <summary>
         /// Control CalendarFechaIngreso.
@@ -121,6 +112,15 @@ namespace FrameWork4
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelFechaNacimiento;
+
+        /// <summary>
+        /// Control LblTxTFechaNacimiento.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblTxTFechaNacimiento;
 
         /// <summary>
         /// Control CalendarFechaNacimiento.
@@ -148,24 +148,6 @@ namespace FrameWork4
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TxtCorreoElectronico;
-
-        /// <summary>
-        /// Control Legajo.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Legajo;
-
-        /// <summary>
-        /// Control TextBox1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
 
         /// <summary>
         /// Control LabelTelefono.

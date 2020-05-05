@@ -42,8 +42,8 @@ namespace FrameWork4
             //Acá tenes que poner el codigo que ejecuta el Botón  
 
 
-            var resultado = FrameWork4.AltaEmpleado.altaEmpleado(TxtNombre.Text.Trim(), TxtApellido.Text.Trim(), DropDownCatEmpleado.Text.Trim(),
-                   DropDownEmpleadoEstado.Text.Trim(), CalendarFechaIngreso.ToString(), CalendarFechaNacimiento.ToString(),
+            var resultado = FrameWork4.AltaEmpleado.altaEmpleado(TxtNombre.Text.Trim(), TxtApellido.Text.Trim(), TxtCategoriaEmpleado.Text.Trim(),
+                   TxtEmpleadoEstado.Text.Trim(), CalendarFechaIngreso.SelectedDate, CalendarFechaNacimiento.SelectedDate,
                    TxtCorreoElectronico.Text.Trim(), TxtTelefono.Text.Trim(), TxtNroCuil.Text.Trim(), TxtEmpleadoDomicilio.Text.Trim()) ;
             if (resultado.Item1 > 0)
             {
@@ -69,7 +69,17 @@ namespace FrameWork4
 
         protected void DropDownEmpleadoEstado_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
+        }
 
+        protected void CalendarFechaNacimiento_SelectionChanged(object sender, EventArgs e)
+        {
+            LblTxTFechaNacimiento.Text = CalendarFechaNacimiento.SelectedDate.ToString();
+        }
+
+        protected void CalendarFechaIngreso_SelectionChanged(object sender, EventArgs e)
+        {
+            LblTxTFechaIngreso.Text = CalendarFechaIngreso.SelectedDate.ToString();
         }
     }
 }

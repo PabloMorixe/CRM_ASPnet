@@ -29,24 +29,19 @@
         <p>
         &nbsp;
             <asp:Label ID="LabelCatEmpleado" runat="server" Text="CatEmpleado"></asp:Label>
-        &nbsp;<asp:DropDownList ID="DropDownCatEmpleado" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" DataTextFormatString="CatEmpleado">
-            <asp:ListItem Selected="True">Seleccione Cliente</asp:ListItem>
-        </asp:DropDownList>
-        <asp:SqlDataSource ID="CRMasp" runat="server" ConnectionString="<%$ ConnectionStrings:CRM_aspConnectionString %>" 
-            SelectCommand="SELECT [Descripcion] FROM [EmpleadoCategoria]" OnSelecting="CRMasp_Selecting"></asp:SqlDataSource>
         </p>
         <p>
-            Empleado estado
-            <asp:DropDownList ID="DropDownEmpleadoEstado" runat="server" DataSourceID="CRMasp" OnSelectedIndexChanged="DropDownEmpleadoEstado_SelectedIndexChanged">
-            </asp:DropDownList>
-
-        <asp:SqlDataSource ID="CRMasp0" runat="server" ConnectionString="<%$ ConnectionStrings:CRM_aspConnectionString %>" 
-            SelectCommand="SELECT [DescripcionEstado] FROM [EmpleadoEstado]" OnSelecting="CRMasp_Selecting"></asp:SqlDataSource>
+        &nbsp;<asp:TextBox ID="TxtCategoriaEmpleado" runat="server"></asp:TextBox>
+        </p>
+        <p>
+            Empleado estado</p>
+        <p>
+            &nbsp;<asp:TextBox ID="TxtEmpleadoEstado" runat="server"></asp:TextBox>
 
         </p>
         <p>
-            fecha ingreso
-            <asp:Calendar ID="CalendarFechaIngreso" runat="server" BackColor="White" BorderColor="White" BorderWidth="1px" Font-Names="Verdana" Font-Size="9pt" ForeColor="Black" Height="190px" NextPrevFormat="FullMonth" Width="350px">
+            fecha ingreso<asp:Label ID="LblTxTFechaIngreso" runat="server" BorderStyle="Outset"></asp:Label>
+&nbsp;<asp:Calendar ID="CalendarFechaIngreso" runat="server" BackColor="White" BorderColor="White" BorderWidth="1px" Font-Names="Verdana" Font-Size="9pt" ForeColor="Black" Height="190px" NextPrevFormat="FullMonth" Width="350px" OnSelectionChanged="CalendarFechaIngreso_SelectionChanged">
                 <DayHeaderStyle Font-Bold="True" Font-Size="8pt" />
                 <NextPrevStyle Font-Bold="True" Font-Size="8pt" ForeColor="#333333" VerticalAlign="Bottom" />
                 <OtherMonthDayStyle ForeColor="#999999" />
@@ -58,9 +53,10 @@
         </p>
         <p>
             <asp:Label ID="LabelFechaNacimiento" runat="server" Text="Fecha Nacimiento"></asp:Label>
+            <asp:Label ID="LblTxTFechaNacimiento" runat="server"></asp:Label>
         </p>
         <p>
-            <asp:Calendar ID="CalendarFechaNacimiento" runat="server" Height="82px" Width="194px"></asp:Calendar>
+            <asp:Calendar ID="CalendarFechaNacimiento" runat="server" Height="82px" Width="194px" OnSelectionChanged="CalendarFechaNacimiento_SelectionChanged"></asp:Calendar>
         </p>
         <p>
             <asp:Label ID="LabelCorreoelectronico" runat="server" Text="Correo electronico"></asp:Label>
@@ -69,11 +65,7 @@
             <asp:TextBox ID="TxtCorreoElectronico" runat="server"></asp:TextBox>
         </p>
         <p>
-            <asp:Label ID="Legajo" runat="server" Text="Legajo"></asp:Label>
-        </p>
-        <p>
-            <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-        </p>
+            &nbsp;</p>
         <p>
             <asp:Label ID="LabelTelefono" runat="server" Text="Telefono"></asp:Label>
             <asp:TextBox ID="TxtTelefono" runat="server"></asp:TextBox>
