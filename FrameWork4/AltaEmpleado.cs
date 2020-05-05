@@ -20,17 +20,17 @@ namespace FrameWork4
             internal static Tuple<int, string> altaEmpleado(string nombre, string Apellido, string EmpleadoCategoriaDescripcion, 
             string EmpleadoEstadoDescripcion, string FechaAlta,string FechaNacimiento, string CorreoElectronico,
             string telefono,  string NroCUIL, string Domicilio)
-        {
+              {
             int res = 0;
             string sessID = "";
-            DbCommand comm = Database.CreateCommand("sp_AltaEmpleados");
+            DbCommand comm = Database.CreateCommand("sp_AltaEmpleado");
             comm.Parameters.Add(Database.CreateParameter(comm, "@Nombre", DbType.String, nombre));
             comm.Parameters.Add(Database.CreateParameter(comm, "@Apellido", DbType.String, Apellido));
             comm.Parameters.Add(Database.CreateParameter(comm, "@EmpleadoCategoriaDescripcion", DbType.String, EmpleadoCategoriaDescripcion));
             comm.Parameters.Add(Database.CreateParameter(comm, "@EmpleadoEstadoDescripcion", DbType.String, EmpleadoEstadoDescripcion));
-            comm.Parameters.Add(Database.CreateParameter(comm, "@FechaAlta", DbType.String, FechaAlta));
+            comm.Parameters.Add(Database.CreateParameter(comm, "@FechaAlta", DbType.Date, FechaAlta));
 
-            comm.Parameters.Add(Database.CreateParameter(comm, "@FechaNacimiento", DbType.String, FechaNacimiento));
+            comm.Parameters.Add(Database.CreateParameter(comm, "@FechaNacimiento", DbType.Date, FechaNacimiento));
             comm.Parameters.Add(Database.CreateParameter(comm, "@CorreoElectronico", DbType.String, CorreoElectronico));
             comm.Parameters.Add(Database.CreateParameter(comm, "@Telefono", DbType.String, telefono));
 
