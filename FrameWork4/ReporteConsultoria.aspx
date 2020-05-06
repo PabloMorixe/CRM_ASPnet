@@ -41,7 +41,7 @@
         </p>
         <p>
             fecha ingreso<asp:Label ID="LblTxTFechaIngreso" runat="server" BorderStyle="Outset"></asp:Label>
-&nbsp;<asp:Calendar ID="CalendarFechaIngreso" runat="server" BackColor="White" BorderColor="White" BorderWidth="1px" Font-Names="Verdana" Font-Size="9pt" ForeColor="Black" Height="190px" NextPrevFormat="FullMonth" Width="350px" OnSelectionChanged="CalendarFechaIngreso_SelectionChanged">
+                   <asp:Calendar ID="CalendarFechaIngreso" runat="server" BackColor="White" BorderColor="White" BorderWidth="1px" Font-Names="Verdana" Font-Size="9pt" ForeColor="Black" Height="190px" NextPrevFormat="FullMonth" Width="350px" OnSelectionChanged="CalendarFechaIngreso_SelectionChanged">
                 <DayHeaderStyle Font-Bold="True" Font-Size="8pt" />
                 <NextPrevStyle Font-Bold="True" Font-Size="8pt" ForeColor="#333333" VerticalAlign="Bottom" />
                 <OtherMonthDayStyle ForeColor="#999999" />

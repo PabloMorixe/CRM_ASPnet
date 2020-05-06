@@ -47,7 +47,7 @@ namespace FrameWork4
                    TxtCorreoElectronico.Text.Trim(), TxtTelefono.Text.Trim(), TxtNroCuil.Text.Trim(), TxtEmpleadoDomicilio.Text.Trim()) ;
             if (resultado.Item1 > 0)
             {
-                Msg_AltaEmpleado.Text = "Usuario dado de alta correctamente ";
+                Msg_AltaEmpleado.Text = "No se dio de alta al forro del empleado";
                 Msg_AltaEmpleado.Visible = true;
                 
 
@@ -55,7 +55,7 @@ namespace FrameWork4
             }
             else
             {
-                Msg_AltaEmpleado.Text = "No se dio de alta al forro del empleado";
+                Msg_AltaEmpleado.Text = "Usuario dado de alta correctamente ";
                 Msg_AltaEmpleado.Visible = true;
             
             }
