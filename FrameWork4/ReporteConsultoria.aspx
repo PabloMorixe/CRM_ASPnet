@@ -34,7 +34,7 @@
         &nbsp;<asp:TextBox ID="TxtCategoriaEmpleado" runat="server"></asp:TextBox>
         </p>
         <p>
-            Empleado estado</p>
+            Empleado estado PUTO</p>
         <p>
             &nbsp;<asp:TextBox ID="TxtEmpleadoEstado" runat="server"></asp:TextBox>
 
