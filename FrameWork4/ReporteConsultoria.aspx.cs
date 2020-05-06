@@ -18,7 +18,6 @@ namespace FrameWork4
             //no me da error...Claramente esto no es lo que queremos. Pero no pincha.
             //DropDownList1.SelectedValue = "CHINO";
     
-
         }
 
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
