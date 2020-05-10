@@ -17,12 +17,13 @@ namespace FrameWork4
 
         {
             
-            DbCommand comm = Database.CreateCommand("sp_CategoriaEmpleado");
+            DbCommand comm = Database.CreateCommand("sp_categoriaEmpleado");
             DataTable dt = Database.ExecuteSelectCommand(comm);
-            for (int i = 0; dt.Rows.Count > 0; i++)
+            for (int i=0; i<dt.Rows.Count-1;i++)
             {
-                DropDownList1.DataTextField = "Categoria";
+                DropDownList1.DataTextField = "IdEmpleadoCategoria";
                 DropDownList1.DataValueField = "Descripcion";
+               
                 DropDownList1.DataBind();
             }
                        
