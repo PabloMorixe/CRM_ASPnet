@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.Common;
 using System.EnterpriseServices;
 using System.Linq;
 using System.Web;
@@ -14,10 +16,19 @@ namespace FrameWork4
         protected void Page_Load(object sender, EventArgs e)
 
         {
-            // sI SELECCIONO UN "Value" que esta dentro del Select que hice
-            //no me da error...Claramente esto no es lo que queremos. Pero no pincha.
-            //DropDownList1.SelectedValue = "CHINO";
-    
+            
+            DbCommand comm = Database.CreateCommand("sp_CategoriaEmpleado");
+            DataTable dt = Database.ExecuteSelectCommand(comm);
+            for(int i = 0; dt.Rows.Count > 0; i++)
+            {
+                string opcionDropDownList = dt.Rows[i]["Descripcion"].ToString();
+                DropDownList1.DataTextField = "Categoria";
+                DropDownList1.DataValueField = "Descripcion";
+
+.            }
+            DropDownList1.DataBind();
+            
+
         }
 
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
@@ -79,6 +90,16 @@ namespace FrameWork4
         protected void CalendarFechaIngreso_SelectionChanged(object sender, EventArgs e)
         {
             LblTxTFechaIngreso.Text = CalendarFechaIngreso.SelectedDate.ToString();
+        }
+
+        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void DropDownList1_SelectedIndexChanged1(object sender, EventArgs e)
+        {
+
         }
     }
 }

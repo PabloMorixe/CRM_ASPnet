@@ -69,7 +69,7 @@
   <ItemGroup>
     <Content Include="Default.aspx" />
     <Content Include="Login.aspx" />
-    <Content Include="ReporteConsultoria.aspx" />
+    <Content Include="AltaEmpleado.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -93,12 +93,12 @@
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReporteConsultoria.aspx.cs">
-      <DependentUpon>ReporteConsultoria.aspx</DependentUpon>
+    <Compile Include="AltaEmpleado.aspx.cs">
+      <DependentUpon>AltaEmpleado.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ReporteConsultoria.aspx.designer.cs">
-      <DependentUpon>ReporteConsultoria.aspx</DependentUpon>
+    <Compile Include="AltaEmpleado.aspx.designer.cs">
+      <DependentUpon>AltaEmpleado.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <PropertyGroup>

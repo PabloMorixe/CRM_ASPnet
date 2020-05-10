@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ReporteConsultoria.aspx.cs" Inherits="FrameWork4.ReporteConsultoria" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AltaEmpleado.aspx.cs" Inherits="FrameWork4.ReporteConsultoria" %>
 
 <!DOCTYPE html>
 
@@ -93,7 +93,9 @@
         <p>
             &nbsp;</p>
         <p>
-            &nbsp;</p>
+            <asp:DropDownList ID="DropDownList1" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged1">
+            </asp:DropDownList>
+        </p>
     </form>
 </body>
 </html>
