@@ -19,9 +19,10 @@ namespace FrameWork4
             
             DbCommand comm = Database.CreateCommand("sp_categoriaEmpleado");
             DataTable dt = Database.ExecuteSelectCommand(comm);
-            for (int i=0; i<dt.Rows.Count-1;i++)
+            for (int i=0; i<dt.Rows.Count;i++)
             {
                 DropDownList1.DataTextField = "IdEmpleadoCategoria";
+
                 DropDownList1.DataValueField = "Descripcion";
                
                 DropDownList1.DataBind();
