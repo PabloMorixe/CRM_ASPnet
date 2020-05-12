@@ -16,13 +16,24 @@ namespace FrameWork4
         protected void Page_Load(object sender, EventArgs e)
 
         {
+            if (!IsPostBack)
+            {
+                string Label1 = ViewState["CategoriaEmpleado"].ToString().Trim();
+                LabelCategoriaEmpleado.Text = Label1;
+            }
        
         }
 
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
             
         {
+            if (ViewState["CategoriaEmpleado"]!=null)
+            {
+                ViewState["CategoriaEmpleado"] = DropDownList1.SelectedValue.ToString();
+                
+            }
             
+
         }
 
         protected void CRMasp_Selecting(object sender, SqlDataSourceSelectingEventArgs e)
@@ -76,12 +87,12 @@ namespace FrameWork4
         }
 
 
-        protected void DropDownList1_SelectedIndexChanged1(object sender, EventArgs e)
+        protected void SqlDataSource1_Selecting(object sender, SqlDataSourceSelectingEventArgs e)
         {
-           
+
         }
 
-        protected void SqlDataSource1_Selecting(object sender, SqlDataSourceSelectingEventArgs e)
+        protected void TxtCategoriaEmpleado_TextChanged(object sender, EventArgs e)
         {
 
         }

@@ -29,9 +29,10 @@
         <p>
         &nbsp;
             <asp:Label ID="LabelCatEmpleado" runat="server" Text="Categoria empleado:" style="text-align: left"></asp:Label>
-            <asp:DropDownList ID="DropDownList1" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged1" DataSourceID="SqlDataSource1" DataTextField="Descripcion" DataValueField="Descripcion">
+            <asp:DropDownList ID="DropDownList1" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" DataSourceID="SqlDataSource1" DataTextField="Descripcion" DataValueField="Descripcion">
             </asp:DropDownList>
-            <asp:TextBox ID="TxtCategoriaEmpleado" runat="server"></asp:TextBox>
+            <asp:TextBox ID="TxtCategoriaEmpleado" runat="server" OnTextChanged="TxtCategoriaEmpleado_TextChanged"></asp:TextBox>
+            <asp:Label ID="LabelCategoriaEmpleado" runat="server" Text="LabelCategoriaEmpleado"></asp:Label>
         </p>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:CRM_aspConnectionString %>" OnSelecting="SqlDataSource1_Selecting" SelectCommand="sp_categoriaEmpleado" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
         <p>
@@ -43,7 +44,7 @@
 
         </p>
         <p>
-            fecha ingreso<asp:Label ID="LblTxTFechaIngreso" runat="server" BorderStyle="Outset"></asp:Label>
+            fecha ingreso<asp:Label ID="LblTxTFechaIngreso" runat="server" BorderStyle="Outset" style="height: 27px"></asp:Label>
                    <asp:Calendar ID="CalendarFechaIngreso" runat="server" BackColor="White" BorderColor="White" BorderWidth="1px" Font-Names="Verdana" Font-Size="9pt" ForeColor="Black" Height="190px" NextPrevFormat="FullMonth" Width="350px" OnSelectionChanged="CalendarFechaIngreso_SelectionChanged">
                 <DayHeaderStyle Font-Bold="True" Font-Size="8pt" />
                 <NextPrevStyle Font-Bold="True" Font-Size="8pt" ForeColor="#333333" VerticalAlign="Bottom" />
