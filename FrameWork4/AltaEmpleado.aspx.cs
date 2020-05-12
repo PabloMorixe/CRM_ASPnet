@@ -87,7 +87,10 @@ namespace FrameWork4
 
         }
 
-       
+        protected void SqlDataSource2_Selecting(object sender, SqlDataSourceSelectingEventArgs e)
+        {
+
+        }
     }
 }
  

@@ -38,11 +38,41 @@
         <p>
         &nbsp;</p>
         <p>
-            Empleado estado PUTO</p>
+            Empleado estado PUTO&nbsp;&nbsp;
+            <asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="EmpleadoEstado" DataTextField="DescripcionEstado" DataValueField="IdEmpleadoEstado">
+            </asp:DropDownList>
+            <asp:SqlDataSource ID="EmpleadoEstado" runat="server" ConnectionString="<%$ ConnectionStrings:CRM_aspConnectionString %>" SelectCommand="SELECT [IdEmpleadoEstado], [DescripcionEstado] FROM [EmpleadoEstado]"></asp:SqlDataSource>
+&nbsp;<asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:CRM_aspConnectionString %>" SelectCommand="SELECT [DescripcionEstado] FROM [EmpleadoEstado]"></asp:SqlDataSource>
+        </p>
         <p>
             &nbsp;<asp:TextBox ID="TxtEmpleadoEstado" runat="server"></asp:TextBox>
 
         </p>
+        <p>
+            EZE PUTO
+            <asp:DropDownList ID="DropDownList3" runat="server" DataSourceID="EzePuto" DataTextField="ServicioNombre" DataValueField="IdServicio">
+            </asp:DropDownList>
+            <asp:SqlDataSource ID="EzePuto" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:CRM_aspConnectionString %>" DeleteCommand="DELETE FROM [Servicios] WHERE [IdServicio] = @original_IdServicio AND (([ServicioNombre] = @original_ServicioNombre) OR ([ServicioNombre] IS NULL AND @original_ServicioNombre IS NULL))" InsertCommand="INSERT INTO [Servicios] ([IdServicio], [ServicioNombre]) VALUES (@IdServicio, @ServicioNombre)" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT [IdServicio], [ServicioNombre] FROM [Servicios]" UpdateCommand="UPDATE [Servicios] SET [ServicioNombre] = @ServicioNombre WHERE [IdServicio] = @original_IdServicio AND (([ServicioNombre] = @original_ServicioNombre) OR ([ServicioNombre] IS NULL AND @original_ServicioNombre IS NULL))">
+                <DeleteParameters>
+                    <asp:Parameter Name="original_IdServicio" Type="Int32" />
+                    <asp:Parameter Name="original_ServicioNombre" Type="String" />
+                </DeleteParameters>
+                <InsertParameters>
+                    <asp:Parameter Name="IdServicio" Type="Int32" />
+                    <asp:Parameter Name="ServicioNombre" Type="String" />
+                </InsertParameters>
+                <UpdateParameters>
+                    <asp:Parameter Name="ServicioNombre" Type="String" />
+                    <asp:Parameter Name="original_IdServicio" Type="Int32" />
+                    <asp:Parameter Name="original_ServicioNombre" Type="String" />
+                </UpdateParameters>
+            </asp:SqlDataSource>
+
+        </p>
+        <p>
+            &nbsp;</p>
+        <p>
+            &nbsp;</p>
         <p>
             fecha ingreso<asp:Label ID="LblTxTFechaIngreso" runat="server" BorderStyle="Outset" style="height: 27px"></asp:Label>
                    <asp:Calendar ID="CalendarFechaIngreso" runat="server" BackColor="White" BorderColor="White" BorderWidth="1px" Font-Names="Verdana" Font-Size="9pt" ForeColor="Black" Height="190px" NextPrevFormat="FullMonth" Width="350px" OnSelectionChanged="CalendarFechaIngreso_SelectionChanged">
