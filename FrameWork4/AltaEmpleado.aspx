@@ -32,7 +32,7 @@
             <asp:DropDownList ID="DropDownList1" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" DataSourceID="SqlDataSource1" DataTextField="Descripcion" DataValueField="Descripcion">
             </asp:DropDownList>
             <asp:TextBox ID="TxtCategoriaEmpleado" runat="server" OnTextChanged="TxtCategoriaEmpleado_TextChanged"></asp:TextBox>
-            <asp:Label ID="LabelCategoriaEmpleado" runat="server" OnLoad="LabelCategoriaEmpleado_Load" Text="LabelCategoriaEmpleado"></asp:Label>
+            <asp:Label ID="LabelCategoriaEmpleado" runat="server" Text="LabelCategoriaEmpleado"></asp:Label>
         </p>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:CRM_aspConnectionString %>" OnSelecting="SqlDataSource1_Selecting" SelectCommand="sp_categoriaEmpleado" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
         <p>
