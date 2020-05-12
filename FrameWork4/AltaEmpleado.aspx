@@ -28,14 +28,14 @@
         </p>
         <p>
         &nbsp;
-            <asp:Label ID="LabelCatEmpleado" runat="server" Text="CatEmpleado"></asp:Label>
-        </p>
+            <asp:Label ID="LabelCatEmpleado" runat="server" Text="Categoria empleado:" style="text-align: left"></asp:Label>
             <asp:DropDownList ID="DropDownList1" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged1" DataSourceID="SqlDataSource1" DataTextField="Descripcion" DataValueField="Descripcion">
             </asp:DropDownList>
+            <asp:TextBox ID="TxtCategoriaEmpleado" runat="server"></asp:TextBox>
+        </p>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:CRM_aspConnectionString %>" OnSelecting="SqlDataSource1_Selecting" SelectCommand="sp_categoriaEmpleado" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
         <p>
-        &nbsp;<asp:TextBox ID="TxtCategoriaEmpleado" runat="server"></asp:TextBox>
-        </p>
+        &nbsp;</p>
         <p>
             Empleado estado PUTO</p>
         <p>
