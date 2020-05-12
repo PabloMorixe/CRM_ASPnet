@@ -16,23 +16,13 @@ namespace FrameWork4
         protected void Page_Load(object sender, EventArgs e)
 
         {
-            if (!IsPostBack)
-            {
-                string Label1 = ViewState["CategoriaEmpleado"].ToString().Trim();
-                LabelCategoriaEmpleado.Text = Label1;
-            }
-       
+                  
         }
 
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
             
         {
-            if (ViewState["CategoriaEmpleado"]!=null)
-            {
-                ViewState["CategoriaEmpleado"] = DropDownList1.SelectedValue.ToString();
-                
-            }
-            
+                       
 
         }
 
@@ -96,6 +86,8 @@ namespace FrameWork4
         {
 
         }
+
+       
     }
 }
  
