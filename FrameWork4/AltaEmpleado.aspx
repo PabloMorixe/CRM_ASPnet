@@ -30,6 +30,9 @@
         &nbsp;
             <asp:Label ID="LabelCatEmpleado" runat="server" Text="CatEmpleado"></asp:Label>
         </p>
+            <asp:DropDownList ID="DropDownList1" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged1" DataSourceID="SqlDataSource1" DataTextField="Descripcion" DataValueField="Descripcion">
+            </asp:DropDownList>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:CRM_aspConnectionString %>" OnSelecting="SqlDataSource1_Selecting" SelectCommand="sp_categoriaEmpleado" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
         <p>
         &nbsp;<asp:TextBox ID="TxtCategoriaEmpleado" runat="server"></asp:TextBox>
         </p>
@@ -65,8 +68,6 @@
             <asp:TextBox ID="TxtCorreoElectronico" runat="server"></asp:TextBox>
         </p>
         <p>
-            &nbsp;</p>
-        <p>
             <asp:Label ID="LabelTelefono" runat="server" Text="Telefono"></asp:Label>
             <asp:TextBox ID="TxtTelefono" runat="server"></asp:TextBox>
         </p>
@@ -93,9 +94,7 @@
         <p>
             &nbsp;</p>
         <p>
-            <asp:DropDownList ID="DropDownList1" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged1">
-            </asp:DropDownList>
-        </p>
+            &nbsp;</p>
     </form>
 </body>
 </html>

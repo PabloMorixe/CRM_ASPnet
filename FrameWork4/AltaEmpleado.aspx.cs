@@ -16,19 +16,7 @@ namespace FrameWork4
         protected void Page_Load(object sender, EventArgs e)
 
         {
-            
-            DbCommand comm = Database.CreateCommand("sp_categoriaEmpleado");
-            DataTable dt = Database.ExecuteSelectCommand(comm);
-            for (int i=0; i<dt.Rows.Count;i++)
-            {
-                DropDownList1.DataTextField = "IdEmpleadoCategoria";
-
-                DropDownList1.DataValueField = "Descripcion";
-               
-                DropDownList1.DataBind();
-            }
-                       
-
+       
         }
 
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
@@ -77,11 +65,6 @@ namespace FrameWork4
 
         }
 
-        protected void DropDownEmpleadoEstado_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
-
         protected void CalendarFechaNacimiento_SelectionChanged(object sender, EventArgs e)
         {
             LblTxTFechaNacimiento.Text = CalendarFechaNacimiento.SelectedDate.ToString();
@@ -92,12 +75,13 @@ namespace FrameWork4
             LblTxTFechaIngreso.Text = CalendarFechaIngreso.SelectedDate.ToString();
         }
 
-        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
 
         protected void DropDownList1_SelectedIndexChanged1(object sender, EventArgs e)
+        {
+           
+        }
+
+        protected void SqlDataSource1_Selecting(object sender, SqlDataSourceSelectingEventArgs e)
         {
 
         }
